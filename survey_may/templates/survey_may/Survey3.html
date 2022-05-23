@@ -1,0 +1,12 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+	In a previous question, you indicated that you consider yourself to be something other than heterosexual or straight. Please answer the following questions.
+	{% formfields %}
+    {% next_button %}
+{% endblock %}

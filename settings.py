@@ -98,6 +98,20 @@ SESSION_CONFIGS = [
         doc="""
     Edit the p_completion_link variable with the completion code for Prolific session
     """ 
+    ),
+    dict(
+        name='Simple_survey_may_22',
+        display_name="May Survey",
+        num_demo_participants=3,
+        app_sequence=['prolific_ID_begin',
+                      'informed_consent',
+                      'survey_may',
+                      'prolific_ID_end'],
+        p_completion_link = 'xxxxxxxx',
+        consent = 'flag_survey/consent.pdf',
+        doc="""
+    Edit the p_completion_link variable with the completion code for Prolific session
+    """ 
     )
 ]
 
