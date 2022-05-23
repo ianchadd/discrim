@@ -110,7 +110,7 @@ class Player(BasePlayer):
                                 "Some of my friends knows about my sexual orientation",
                                 "None of my friends knows about my sexual orientation"])
     so_prof = make_list_radio("12. Think about the people in your professional life. To the best of your knowledge, which of the following statements most closely describes your situation?",
-                            ["Everyone in my professional life know about my sexual orientation",
-                            "Most people in my professional life knows about my sexual orientation",
-                            "Some people in my professional life knows about my sexual orientation",
+                            ["Everyone in my professional life knows about my sexual orientation",
+                            "Most people in my professional life know about my sexual orientation",
+                            "Some people in my professional life know about my sexual orientation",
                             "No one in my professional life knows about my sexual orientation"])
