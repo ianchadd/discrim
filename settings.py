@@ -14,6 +14,16 @@ else:
 # the session config can be accessed from methods in your apps as self.session.config,
 # e.g. self.session.config['participation_fee']
 
+SESSION_CONFIG_DEFAULTS = dict(
+    real_world_currency_per_point=1.00, participation_fee=1.50, doc="",
+    data_pages_enabled=True,
+    num_sample_participants=10,
+    consent_additional_message = """""",
+    round_values = ["1.00"],
+    delay = False,
+    consent_link = False,
+    consent_url = 'xxxxx'
+)
 
 SESSION_CONFIGS = [
     dict(
