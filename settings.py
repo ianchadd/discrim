@@ -13,23 +13,6 @@ else:
 # in SESSION_CONFIGS, except those that explicitly override it.
 # the session config can be accessed from methods in your apps as self.session.config,
 # e.g. self.session.config['participation_fee']
-sample_participants = []
-with open('sample_participants.json') as sample_participants:
-    sample_participants=json.load(sample_participants)
-SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00, participation_fee=1.50, doc="",
-    data_pages_enabled=True,
-    sample_participants=sample_participants,
-    num_sample_participants=10,
-    consent_additional_message = """""",
-    round_values = ["1.00"],
-    piece_rate = 0.25,
-    seconds_for_counting_task=5,
-    guess_rate = 0.20,
-    delay = False,
-    consent_link = False,
-    consent_url = 'xxxxx'
-)
 
 
 SESSION_CONFIGS = [
@@ -84,34 +67,6 @@ SESSION_CONFIGS = [
         doc="""
     Edit the p_completion_link variable with the completion code for Prolific session
     """
-    ),
-    dict(
-        name='Simple_survey_flag',
-        display_name="QSP Survey 1",
-        num_demo_participants=3,
-        app_sequence=['prolific_ID_begin',
-                      'simple_survey_flag',
-                      'survey_demographics',
-                      'prolific_ID_end'],
-        participation_fee = 2.00,
-        p_completion_link = 'xxxxxxxx',
-        doc="""
-    Edit the p_completion_link variable with the completion code for Prolific session
-    """ 
-    ),
-    dict(
-        name='Simple_survey_may_22',
-        display_name="May Survey",
-        num_demo_participants=3,
-        app_sequence=['prolific_ID_begin',
-                      'informed_consent',
-                      'survey_may',
-                      'prolific_ID_end'],
-        p_completion_link = 'xxxxxxxx',
-        consent = 'flag_survey/consent.pdf',
-        doc="""
-    Edit the p_completion_link variable with the completion code for Prolific session
-    """ 
     )
 ]
 
@@ -128,29 +83,7 @@ ROOMS = [
         name='econ101',
         display_name='Econ 101 class',
         participant_label_file='_rooms/econ101.txt',
-    ),
-    dict(name='live_demo', display_name='Room for live demo (no participant labels)'),
-    dict(name='prolific_qsp', display_name='Prolific Room for QSP (no participant labels)'),
-    dict(
-        name='rpi_lab',
-        display_name='RPI Virtual Econ Laboratory'
-    ),
-    dict(
-        name='rpi_lab_qsp_1',
-        display_name='RPI Virtual Econ Laboratory: QSP 1'
-    ),
-    dict(
-        name='rpi_lab_qsp_2',
-        display_name='RPI Virtual Econ Laboratory: QSP 2'
-    ),
-    dict(
-        name='rpi_lab_qsp_3',
-        display_name='RPI Virtual Econ Laboratory: QSP 3'
-    ),
-    dict(
-        name='rpi_lab_qsp_4',
-        display_name='RPI Virtual Econ Laboratory: QSP 4'
-    ),
+    )
 ]
 
 ADMIN_USERNAME = 'admin'
@@ -171,7 +104,6 @@ INSTALLED_APPS = ['otree',
                   'django.contrib.humanize',
                   'otreeutils'
                   ]
-EXTENSION_APPS = ['slider_puzzle']
 # inactive session configs
 # dict(name='trust', display_name="Trust Game", num_demo_participants=2, app_sequence=['trust', 'payment_info']),
 # dict(name='prisoner', display_name="Prisoner's Dilemma", num_demo_participants=2,
